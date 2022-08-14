@@ -1,0 +1,129 @@
+.section2 {
+  width: 100%;
+  padding-top: 100px;
+  text-align: center;
+  .services {
+    margin-bottom: 3.3rem;
+    h4 {
+      color: #f16214;
+    }
+  }
+  .section2-head {
+    margin-bottom: 4rem;
+    h1 {
+      line-height: 5px;
+      font-size: 40px;
+    }
+  }
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+.choose-food {
+  cursor: pointer;
+  width: 70%;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+
+  p {
+    color: #888888;
+  }
+}
+#qualityfood,
+#healthyfood,
+#delivery {
+  padding: 2.4rem 1rem;
+  width: 26%;
+  height: 90%;
+  background-color: #ffffff;
+  border-radius: 60px 0;
+  border: 1px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-info p {
+  line-height: 26px;
+}
+#qualityfood:hover,
+#healthyfood:hover,
+#delivery:hover {
+  border: 1px solid transparent;
+  background: #ffffff;
+  box-shadow: 5px 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and(max-width:1100px) {
+  .section2-head {
+    h1 {
+      font-size: 30px !important;
+    }
+  }
+  .choose-food {
+    width: 90%;
+    // flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  #qualityfood {
+    width: 30%;
+    padding: 25px 10px;
+  }
+  #healthyfood {
+    width: 30%;
+    padding: 25px 10px;
+  }
+  #delivery {
+    width: 30%;
+    padding: 25px 10px;
+  }
+}
+@media screen and(max-width:800px) {
+  #qualityfood {
+    width: 40%;
+    padding: 19px 10px;
+  }
+  #healthyfood {
+    width: 40%;
+    padding: 19px 10px;
+  }
+  #delivery {
+    width: 40%;
+    padding: 19px 10px;
+  }
+  .choose-food {
+    // border: 1px solid red !important;
+    // width: 100%;
+  }
+  .section2 {
+    h1 {
+      font-size: 26px;
+    }
+  }
+  .choose-food {
+    h1 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+  .choose-food {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and(max-width:680px) {
+  .choose-food {
+    flex-direction: column;
+  }
+  #qualityfood,
+  #healthyfood,
+  #delivery {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,476 @@
+.navbar {
+  // border: 1px solid red;
+  width: 60%;
+  display: flex;
+  padding-left: 140px;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding-top: 15px;
+  align-items: center;
+  ul {
+    display: flex;
+    gap: 47px;
+    li {
+      line-height: 19.41px;
+      list-style: none;
+      a:hover {
+        color: #f16214;
+      }
+    }
+  }
+}
+#menuToggle {
+  display: none;
+}
+.registrbtn button {
+  cursor: pointer;
+  background: #f16214;
+  border: none;
+  color: #ffffff;
+  padding: 7px 16px;
+  border-radius: 120px;
+  font-family: Product Sans;
+  &:hover {
+    background-color: #ff0000;
+  }
+}
+
+.head {
+  background-image: url(./Assetsimage/Photos/Producthead.png);
+  background-repeat: no-repeat;
+  background-size: 100vh;
+  background-position: top right;
+  z-index: -1;
+  overflow: hidden;
+}
+.contain {
+  display: flex;
+  width: 100%;
+}
+.left {
+  margin: 5rem 0;
+  margin-left: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  width: 45%;
+  padding-right: 15px;
+}
+.text_head {
+  h1 {
+    font-size: 75px;
+    width: 72%;
+    line-height: 91px;
+    margin-bottom: 20px;
+  }
+  p {
+    width: 85%;
+    color: #888888;
+    line-height: 24px;
+  }
+}
+
+.getstart button {
+  cursor: pointer;
+  background: #f16214;
+  border: none;
+  font-size: 16px;
+  padding: 15px 19px;
+  color: #ffffff;
+  border-radius: 54px;
+  display: flex;
+  align-items: center;
+  width: 170px;
+  height: 50px;
+  gap: 10px;
+  position: relative;
+  font-family: Product Sans;
+  // font-weight: 700;
+  // line-height: 100px;
+
+  span {
+    border-bottom: 2.3px solid #f16214;
+    z-index: 1;
+    height: 6px;
+    width: 6px;
+    border-right: 2.3px solid#f16214;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 20.8px;
+    left: 140px;
+  }
+  &::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    right: -15px;
+  }
+  &:hover {
+    background-color: red;
+    span {
+      border-color: rgb(0, 0, 0);
+    }
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .navbar {
+    display: none;
+  }
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 34px;
+    left: 30px;
+    z-index: 10;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: rgb(255, 4, 0);
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+  /*
+ * Just a quick hamburger
+ */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffb303;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #c30c0c;
+  }
+
+  /*
+ * But let's hide the middle one.
+ */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+ * Ohyeah and the last one should go the other direction
+ */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu {
+    position: absolute;
+    width: 110vw;
+    height: 165vh;
+    text-align: center;
+    margin: -100px 0 0 -108px;
+    padding-top: 125px;
+    background: #e69615;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  /*
+ * And let's slide it in from the left
+ */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+}
+@media screen and (max-width: 500px) and (min-width: 1200px) {
+  .left {
+    h1 {
+      font-size: 55px;
+      padding-left: 10px;
+    }
+  }
+}
+.info-bar {
+  box-shadow: 0px 22px 52px 0px #00000012;
+  margin: 0 auto;
+  width: 70%;
+  padding: 4rem 3rem;
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  background: #ffffff;
+  border-radius: 60px 0;
+  margin-top: 90px;
+  p {
+    font-size: 13px;
+    color: #888888;
+  }
+}
+.info-time {
+  // content: "";
+  border-right: 2px solid #dddddd;
+  padding-right: 8%;
+}
+.info-gps {
+  border-right: 2px solid #dddddd;
+  padding-right: 8%;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  // justify-content: center;
+  margin-top: -10px;
+
+  &__button:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+
+$social-button-size: 40px;
+$social-button-icon-size: 0.4;
+$social-button-background: #f1621426;
+$social-button-active-color: #fff;
+$social-button-transition-time: 0.3s;
+
+$social-button-colors: (
+  "facebook": #f16214,
+  "linkedin": #f16214,
+  "twitter": #f16214,
+  "instagram": #f16214,
+);
+.social-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: $social-button-size;
+  height: $social-button-size;
+  text-decoration: none;
+  border-radius: 100%;
+  background: $social-button-background;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    transition: $social-button-transition-time;
+  }
+
+  &:focus,
+  &:hover {
+    color: $social-button-active-color;
+
+    &::after {
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      margin-left: calc(-50% - 1px);
+    }
+  }
+
+  i,
+  svg {
+    position: relative;
+    z-index: 1;
+    transition: $social-button-transition-time;
+  }
+
+  i {
+    font-size: $social-button-size * $social-button-icon-size;
+  }
+
+  svg {
+    height: percentage($social-button-icon-size);
+    width: percentage($social-button-icon-size);
+  }
+
+  @each $name, $color in $social-button-colors {
+    &--#{$name} {
+      color: $color;
+
+      &::after {
+        background: $color;
+      }
+    }
+  }
+}
+.head {
+  padding-bottom: 90px;
+}
+
+@media screen and(max-width:870px) {
+  .info-bar {
+    margin-top: 1000px;
+    font-size: 0.8rem;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #c2600a74;
+    width: 60%;
+    p {
+      color: black;
+    }
+  }
+  .info-time {
+    border: none;
+  }
+  .info-gps {
+    border: none;
+  }
+}
+@media screen and(max-width:1100px) {
+  .head {
+    background-image: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url(./Assetsimage/Photos/Producthead.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.35;
+      filter: blur(5px);
+    }
+  }
+  .left {
+    margin: 2rem auto;
+    display: flex;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    // padding: 48px;
+
+    h1 {
+      margin: 2.5rem auto;
+      background-color: rgb(2, 2, 2);
+      background-color: rgba(255, 166, 0, 0.538);
+      // color: #ffb303;
+      border-radius: 20px 0;
+      font-size: 55px;
+      width: 90%;
+    }
+    p {
+      margin: 2.5rem auto;
+      color: #141414;
+
+      // color: #131313;
+      background-color: rgb(0, 0, 0); /* Fallback color */
+      background-color: rgba(255, 166, 0, 0.538);
+      border-radius: 0 20px;
+    }
+  }
+  .info-bar {
+    margin-top: 100px;
+    width: 80%;
+    div {
+      padding: 0 20px;
+    }
+  }
+}
+@media screen and(max-width:750px) {
+  .head {
+    background-image: none;
+    &::before {
+      // filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  .left {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+      135deg,
+      rgba(255, 18, 18, 0.918) rgb(240, 2, 2)
+    );
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 36);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 54px 0;
+  }
+  .text_head {
+    margin: 0 auto;
+    padding-left: 10px;
+    h1 {
+      width: 90%;
+      line-height: 2.5rem;
+      font-size: 2rem;
+    }
+    p {
+      width: 90%;
+    }
+  }
+  .info-bar {
+    max-width: 55%;
+  }
+}

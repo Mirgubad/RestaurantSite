@@ -1,0 +1,165 @@
+.section3 {
+  width: 100%;
+  text-align: center;
+  h4 {
+    color: #f16214;
+    padding: 50px 0;
+  }
+  h1 {
+    padding-bottom: 70px;
+  }
+}
+.section3-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.products {
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  gap: 20px;
+}
+
+.foods {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.productlist {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  //   border: 1px solid black;
+  width: 30%;
+  height: 42%;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 50px 0px;
+  padding-bottom: 50px;
+  &:hover {
+    box-shadow: 5px 15px 45px rgba(0, 0, 0, 0.1);
+  }
+}
+#prphoto {
+  border-top-left-radius: 50px;
+}
+.foodname {
+  // border: 1px solid red;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: start;
+}
+.price {
+  margin-top: 1.5rem;
+  display: flex;
+  height: 100%;
+  width: 20%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.foods {
+  button {
+    cursor: pointer;
+    font-family: Product Sans;
+    background: #f16214;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    width: 100px;
+    height: 35px;
+    font-size: 11px;
+
+    &:hover {
+      background: red;
+    }
+  }
+}
+
+#moreproduct {
+  margin: 0 auto;
+  margin-top: 70px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #f16214;
+  border: none;
+  color: #ffffff;
+  border-radius: 54px;
+  display: flex;
+  align-items: center;
+  width: 190px;
+  height: 50px;
+  position: relative;
+  font-family: Product Sans;
+  font-weight: 500;
+  // line-height: 100px;
+  &:hover {
+    background-color: red;
+    span {
+      border-color: rgb(0, 0, 0);
+    }
+  }
+  & span {
+    border-bottom: 2.3px solid #f16214;
+    position: absolute;
+    z-index: 10;
+    height: 6px;
+    width: 6px;
+    border-right: 2.3px solid #f16214;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 20.8px;
+    left: 159px;
+  }
+  &::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    right: -13px;
+  }
+}
+.social-buttons {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+@media screen and(max-width:1090px) {
+  .products {
+    width: 90%;
+    // justify-content: space-evenly;
+  }
+}
+@media screen and(max-width:870px) {
+  .products {
+    width: 90% !important;
+  }
+  .productlist {
+    width: 43%;
+    height: 28%;
+  }
+}
+@media screen and(max-width:600px) {
+  .products {
+    width: 80% !important;
+  }
+  .productlist {
+    width: 70%;
+    height: 13%;
+  }
+  .price {
+    padding-right: 9px;
+  }
+}
