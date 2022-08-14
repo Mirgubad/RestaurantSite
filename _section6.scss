@@ -190,3 +190,33 @@
     width: 100%;
   }
 }
+@media screen and(max-width:500px) {
+  .subscribe {
+    width: 90%;
+  }
+  .subsrcipton {
+    position: relative;
+  }
+  .subsrcipton .btn-submit {
+    font-family: Product Sans;
+    margin: 5px;
+    background: rgba(204, 204, 204, 0.8);
+    border: none;
+    width: 90px;
+    height: 50px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 16px;
+    background: #f16214;
+    border-radius: 13px;
+    position: absolute;
+    right: 0;
+    top: -2px;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+}

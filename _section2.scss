@@ -127,3 +127,11 @@
     gap: 20px;
   }
 }
+
+@media screen and(max-width:500px) {
+  .section2-head {
+    h1 {
+      font-size: 22px !important;
+    }
+  }
+}
